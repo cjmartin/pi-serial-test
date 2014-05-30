@@ -37,6 +37,10 @@ sp.on('error', function (err) {
 
 sp.on('open', function () {
 	console.log('port opened...');
+
+	sp.on('data', function(data) {
+		console.log('data received: ' + data);
+	});
 });
 
 // view engine setup
